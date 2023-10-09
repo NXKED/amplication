@@ -4,15 +4,17 @@
   position: relative;
 
   &__invalid {
+    position: relative;
     color: var(--theme-red);
-    position: absolute;
-    right: 8px;
-    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   label {
     @include label;
     position: relative;
+    display: block;
   }
 
   input,

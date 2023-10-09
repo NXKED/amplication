@@ -43,25 +43,22 @@ export function TextInput({
             <Label text={label} inputToolTip={inputToolTip} />
           )}
 
-          {textarea ? (
-            <textarea
-              {...rest}
-              ref={inputRef as React.Ref<HTMLTextAreaElement>}
-            />
-          ) : (
-            <input
-              key={key}
-              {...rest}
-              ref={inputRef as React.Ref<HTMLInputElement>}
-            />
-          )}
-          {hasError && (
-            <Icon
-              icon="info_circle"
-              size="small"
-              className={`${CLASS_NAME}__invalid`}
-            />
-          )}
+          <div className={`${CLASS_NAME}__invalid`}>
+            {textarea ? (
+              <textarea
+                {...rest}
+                ref={inputRef as React.Ref<HTMLTextAreaElement>}
+              />
+            ) : (
+              <input
+                key={key}
+                {...rest}
+                ref={inputRef as React.Ref<HTMLInputElement>}
+              />
+            )}
+            {hasError && <Icon icon="info_circle" size="small" />}
+          </div>
+
           {helpText && labelType && labelType === "normal" && (
             <Label text={helpText} type={labelType} />
           )}
