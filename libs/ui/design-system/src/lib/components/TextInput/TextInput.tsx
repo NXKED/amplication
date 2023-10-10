@@ -43,7 +43,7 @@ export function TextInput({
             <Label text={label} inputToolTip={inputToolTip} />
           )}
 
-          <div className={`${CLASS_NAME}__invalid`}>
+          <div className={`${CLASS_NAME}__input-error-wrapper`}>
             {textarea ? (
               <textarea
                 {...rest}

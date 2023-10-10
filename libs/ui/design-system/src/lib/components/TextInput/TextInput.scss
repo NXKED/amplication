@@ -3,7 +3,7 @@
 .text-input {
   position: relative;
 
-  &__invalid {
+  &__input-error-wrapper {
     position: relative;
     color: var(--theme-red);
     display: flex;
